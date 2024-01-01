@@ -25,11 +25,11 @@ import SystemConfiguration
 
 let ReachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
 
-public enum ReachabilityType: CustomStringConvertible {
+ enum ReachabilityType: CustomStringConvertible {
     case wwan
     case wiFi
     
-    public var description: String {
+     var description: String {
         switch self {
         case .wwan: return "WWAN"
         case .wiFi: return "WiFi"
@@ -37,12 +37,12 @@ public enum ReachabilityType: CustomStringConvertible {
     }
 }
 
-public enum ReachabilityStatus: CustomStringConvertible  {
+ enum ReachabilityStatus: CustomStringConvertible  {
     case offline
     case online(ReachabilityType)
     case unknown
     
-    public var description: String {
+     var description: String {
         switch self {
         case .offline: return "Offline"
         case .online(let type): return "\(type)"
